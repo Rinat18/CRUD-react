@@ -5,7 +5,7 @@ const TodoItem = ({ name, id, deleteItem, edit, setValue, edite, value, editSubm
     <div className="itemLi">
       <input onChange={() => deleteItem(id)} id={id} type="checkbox" />
       {edite == id ? (
-        <form onSubmit={editSubmit} id={id}>
+        <form onSubmit={() => editSubmit(id)} id={id}>
         <input
           onChange={(e) => setValue(e.target.value)}
           type="text"
@@ -13,9 +13,9 @@ const TodoItem = ({ name, id, deleteItem, edit, setValue, edite, value, editSubm
         />
       </form>
       ):(
-        <li>{name}</li>
+        <li className="liItem">{name}</li>
       ) }
-      <button onClick={() => edit(id,name)} id={id}>
+      <button className="btnEdit" onClick={() => edit(id,name)} id={id}>
         Edit
       </button>
     </div>

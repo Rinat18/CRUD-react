@@ -1,44 +1,60 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(98, 29, 163);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.container{
-  width: 80%;
+.container {
+  width: 40%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 100px;
+  background-color: rgb(165, 81, 243);
+  border-radius: 20px;
+  padding: 30px 20px;
 }
 
-.itemLi{
+.itemLi {
   display: flex;
   justify-content: space-between;
 }
-.todoList{
+.todoList {
   margin-top: 20px;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-ul{
+ul {
   width: 100%;
   display: flex;
   flex-direction: column;
+  list-style-type: none;
 }
-.itemLi{
-  width: 100%;
+.itemLi {
+  width: 96%;
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
+}
+
+.liItem {
+  font-size: 18px;
+  color: white;
+}
+
+.btnEdit{
+  border-radius: 20px;
+  border: none;
+  width: 7%;
 }

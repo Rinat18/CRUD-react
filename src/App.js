@@ -50,12 +50,13 @@ const App = () => {
     setValue(name)
 
   }
-  function editSubmit(e) {
-    e.preventDefault()
-    todo.filter((elem) => {
-      // if(elem.id == id){
-      //   elem.name = value
-      // }
+  function editSubmit(id) {
+    const editted = todo.map((elem) => {
+      if(elem.id == id){
+        elem.name = value
+        console.log(elem);
+      }
+      return elem
     })
     setEdite(null)
   }
@@ -65,6 +66,7 @@ const App = () => {
       <div className="todoForm">
         <form onSubmit={TodoInp}>
           <input
+            placeholder="Write your ToDo here"
             onChange={(e) => setTodoTitle(e.target.value)}
             value={todoTitle}
             type="text"
